@@ -16,5 +16,6 @@ export const App = () => {
     handleExecTest();
   }, []);
 
-  return <h1>{message}</h1>;
+  // return <h1>{message}</h1>;
+  return <h1>Hello world</h1>;
 };
