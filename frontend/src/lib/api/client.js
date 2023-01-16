@@ -8,7 +8,9 @@ const options = {
 
 export const client = applyCaseMiddleware(
   axios.create({
-    baseURL: "http://localhost:3001/api/v1",
+    // ローカル用IPアドレス
+    // baseURL: "http://localhost:3001/api/v1",
+    baseURL: "http://13.230.192.146//api/v1",
   }),
   options
 );
