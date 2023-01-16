@@ -10,7 +10,7 @@ export const client = applyCaseMiddleware(
   axios.create({
     // ローカル用IPアドレス
     // baseURL: "http://localhost:3001/api/v1",
-    baseURL: "http://13.230.192.146//api/v1",
+    baseURL: "http://35.72.153.234/api/v1",
   }),
   options
 );
