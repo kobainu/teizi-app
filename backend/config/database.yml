@@ -2,22 +2,24 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: password # デフォルトだと空欄になっているので変更
-  host: db # デフォルトだとlocalhostになっているので変更
 
 development:
   <<: *default
   database: myapp_development
+  username: root
+  password: password
+  host: db
 
 test:
   <<: *default
   database: myapp_test
+  username: root
+  password: password
+  host: db
 
 production:
+  <<: *default
   database: portfolio-db
-  adapter: mysql2
-  encoding: utf8mb4
   charset: utf8mb4
   collation: utf8mb4_general_ci
   username: <%= Rails.application.credentials.db[:user_name] %>
