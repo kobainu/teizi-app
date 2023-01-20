@@ -6,4 +6,16 @@ require:
   - rubocop-rspec
 
 AllCops:
+  Exclude:
+    - "tmp/**/*"
+    - "config/initializers/*"
+    - "vendor/**/*"
+    - "db/schema.rb"
+    - "node_modules/**/*"
+    - "db/migrate/*.rb"
+    - "bin/*"
+  DisplayCopNames: true
   NewCops: enable
+
+Documentation:
+  Enabled: false
